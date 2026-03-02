@@ -56,8 +56,7 @@ def populate():
 
    cats = {'Python': {'pages': python_pages, 'views' : 128, 'likes' : 64},
            'Django': {'pages': django_pages, 'views' : 64, 'likes' : 32},
-           'Other Frameworks': {'pages': other_pages, 'views' : 32, 'likes' : 16} 
-         }
+           'Other Frameworks': {'pages': other_pages, 'views' : 32, 'likes' : 16} }
 
  # If you want to add more categories or pages,
  # add them to the dictionaries above.
