@@ -17,7 +17,7 @@ class PageForm(forms.ModelForm):
     title = forms.CharField(max_length=128,
                             help_text="Please enter the title of the page.")
     url = forms.URLField(max_length=200,
-    help_text="Please enter the URL of the page.")
+                         help_text="Please enter the URL of the page.")
     views = forms.IntegerField(widget=forms.HiddenInput(), initial=0)
 
     def clean(self):
@@ -29,7 +29,6 @@ class PageForm(forms.ModelForm):
             cleaned_data['url'] = url
         return cleaned_data
 
-class Meta:
-
-    model = Page
-    exclude = ('category',)
+    class Meta:
+        model = Page
+        exclude = ('category',)

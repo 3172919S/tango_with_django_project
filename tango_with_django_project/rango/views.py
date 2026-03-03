@@ -75,11 +75,9 @@ def add_category(request):
         form = CategoryForm(request.POST)
 
         if form.is_valid():
-
             form.save(commit=True)
-
             return redirect('/rango/')
-    else:
+        else:
             print(form.errors)
 
-            return render(request, 'rango/add_category.html', {'form': form})
+    return render(request, 'rango/add_category.html', {'form': form})
